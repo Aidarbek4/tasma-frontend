@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
+import "./viewfilm.scss"
 
 function ViewFim() {
     const [film, setFilm]=useState({
@@ -30,14 +31,19 @@ function ViewFim() {
         <div className="container">
             <div className="row">
                 <div className="column">
-                    <h2 className="addfilm__title">Add Film</h2>
                     <div className="card">
-                        <img src={film.posterUrl} alt="poster" />
-                        <h2>{film.title}</h2>
-                        <p>{film.description}</p>
-                        <span>{film.genre}</span>
-                        <span>{film.year}</span>
-                        <span>{film.duration}</span>
+                        <div className="desc">
+                            <div className="poster-wrapper">
+                                <img src={film.posterUrl} alt="poster" />
+                            </div>
+                            <div className="info">
+                                <h2>{film.title}</h2>
+                                <p>{film.description}</p>
+                                <span>{film.genre}</span>
+                                <span>{film.year}</span>
+                                <span>{film.duration}</span>
+                            </div>                           
+                        </div>
                         <div className="video" >
                             <iframe width="1200" height="600" src={film.videoUrl} frameborder="0"></iframe>
                         </div>

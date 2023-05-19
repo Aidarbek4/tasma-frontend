@@ -31,13 +31,17 @@ function Home() {
                     {
                         films.map((film, index)=>(
                             <div className="home__film" key={index+film.title}>
-                                <img src={film.posterUrl} alt="poster" className="home__film-poster" />
-                                <h4 className="home__film-title">{film.title}</h4>
+                                <div className="home__film-poster-wrapper">
+                                    <img src={film.posterUrl} alt="poster" className="home__film-poster" />
+                                </div>
+                                <div className="home__film-info">
+                                    <h4 className="home__film-title">{film.title}</h4>
 
-                                <div className="home__film-buttons">
-                                    <Link to={`/view_film/${film.id}`} className="home__film-btn">Read More</Link>
-                                    <Link to={ `/edit_film/${film.id}`} className="home__film-btn">Edit</Link>
-                                    <button className="home__film-btn" onClick={()=>deleteFilm(film.id)}>Delete</button>
+                                    <div className="home__film-buttons">
+                                        <Link to={`/view_film/${film.id}`} className="home__film-btn">Read More</Link>
+                                        <Link to={ `/edit_film/${film.id}`} className="home__film-btn">Edit</Link>
+                                        <button className="home__film-btn" onClick={()=>deleteFilm(film.id)}>Delete</button>
+                                    </div>
                                 </div>
                             </div>
                         ))

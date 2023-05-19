@@ -1,0 +1,35 @@
+.viewfilm{
+    .container{
+        width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    .desc{
+        display: flex;
+    }
+    .poster{
+        width: 100%;
+        object-fit: cover;
+        &-wrapper{
+            width: 700px;
+        }
+    }
+    .info{
+        max-width: 500px;
+        padding: 20px 0 0 50px;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: bold;
+        color: #8F0105;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 20px;
+        color: #ded6d6;
+    }
+}

@@ -1,9 +1,9 @@
 import './App.scss';
-import AddFilm from './films/AddFilm';
-import EditFilm from './films/EditFilm';
-import ViewFim from './films/ViewFim';
-import Navbar from './layout/Navbar';
-import Home from './pages/Home';
+import AddFilm from './components/films/AddFilm/AddFilm';
+import EditFilm from './components/films/EditFilm/EditFilm';
+import ViewFim from './components/films/ViewFilm/ViewFim';
+import Navbar from './layout/Navbar/Navbar';
+import Home from './pages/Home/Home';
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
