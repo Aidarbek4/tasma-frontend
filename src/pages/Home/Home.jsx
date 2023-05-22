@@ -4,7 +4,6 @@ import axios from "axios"
 import { Link } from "react-router-dom";
 
 function Home() {
-
     const [films, setFilms] = useState([]);
 
     useEffect(()=>{
